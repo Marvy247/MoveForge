@@ -1,13 +1,16 @@
-target/
-cli/
-core/
-simulator/
-sdk/
-examples/
-scripts/
-Cargo.toml
-Cargo.lock
+# Ignore Rust files (but keep frontend/)
+/target
+/cli
+/core
+/simulator
+/sdk
+/examples
+/scripts
+/Cargo.toml
+/Cargo.lock
 *.rs
 *.move
 *.sol
 *.sh
+README_VERCEL_DEPLOY.md
+VERCEL_FIX.md
