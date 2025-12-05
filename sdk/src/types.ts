@@ -1,4 +1,4 @@
-export interface ParaForgeConfig {
+export interface MoveForgeConfig {
   nodeUrl: string;
   network: 'testnet' | 'mainnet' | 'local';
   parallel?: boolean;

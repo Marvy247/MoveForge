@@ -1,14 +1,14 @@
 #!/bin/bash
 set -e
 
-# ParaForge Installation Script
-# This script installs ParaForge CLI on Unix-based systems
+# MoveForge Installation Script
+# This script installs MoveForge CLI on Unix-based systems
 
-REPO="paraforge/paraforge"
-INSTALL_DIR="${INSTALL_DIR:-$HOME/.paraforge}"
+REPO="moveforge/moveforge"
+INSTALL_DIR="${INSTALL_DIR:-$HOME/.moveforge}"
 BIN_DIR="${BIN_DIR:-$HOME/.local/bin}"
 
-echo "⚡ ParaForge Installer"
+echo "⚡ MoveForge Installer"
 echo "====================="
 echo ""
 
@@ -49,8 +49,8 @@ echo ""
 mkdir -p "$INSTALL_DIR"
 mkdir -p "$BIN_DIR"
 
-# Clone or download ParaForge
-echo "Installing ParaForge..."
+# Clone or download MoveForge
+echo "Installing MoveForge..."
 
 if [ -d "$INSTALL_DIR/src" ]; then
     echo "Updating existing installation..."
@@ -62,14 +62,14 @@ else
     cd "$INSTALL_DIR/src"
 fi
 
-# Build ParaForge
-echo "Building ParaForge (this may take a few minutes)..."
+# Build MoveForge
+echo "Building MoveForge (this may take a few minutes)..."
 cargo build --release
 
 # Install binary
 echo "Installing binary to $BIN_DIR..."
-cp target/release/paraforge "$BIN_DIR/"
-chmod +x "$BIN_DIR/paraforge"
+cp target/release/moveforge "$BIN_DIR/"
+chmod +x "$BIN_DIR/moveforge"
 
 # Add to PATH if not already there
 if [[ ":$PATH:" != *":$BIN_DIR:"* ]]; then
@@ -82,18 +82,18 @@ if [[ ":$PATH:" != *":$BIN_DIR:"* ]]; then
 fi
 
 # Verify installation
-if command -v paraforge &> /dev/null; then
+if command -v moveforge &> /dev/null; then
     echo ""
-    echo "✅ ParaForge installed successfully!"
+    echo "✅ MoveForge installed successfully!"
     echo ""
-    paraforge --version
+    moveforge --version
     echo ""
     echo "Quick start:"
-    echo "  paraforge init my-project"
-    echo "  paraforge node --fork testnet"
-    echo "  paraforge sim --parallel --count 100"
+    echo "  moveforge init my-project"
+    echo "  moveforge node --fork testnet"
+    echo "  moveforge sim --parallel --count 100"
     echo ""
-    echo "Documentation: https://github.com/paraforge/paraforge"
+    echo "Documentation: https://github.com/moveforge/moveforge"
 else
     echo ""
     echo "❌ Installation failed. Please check the errors above."

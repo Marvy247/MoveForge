@@ -46,7 +46,7 @@ impl RpcServer {
             "eth_call" => self.call(params).await,
             "eth_estimateGas" => self.estimate_gas(params).await,
             "move_executeTransaction" => self.execute_move_transaction(params).await,
-            "paraforge_simulateBatch" => self.simulate_batch(params).await,
+            "moveforge_simulateBatch" => self.simulate_batch(params).await,
             _ => Ok(json!({ "error": "Method not found" })),
         }
     }

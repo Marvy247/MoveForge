@@ -4,7 +4,7 @@ pragma solidity ^0.8.20;
 /**
  * @title HybridBridge
  * @notice Example Solidity contract that bridges with Move modules on Movement
- * @dev Demonstrates hybrid Move-EVM interactions for ParaForge testing
+ * @dev Demonstrates hybrid Move-EVM interactions for MoveForge testing
  */
 contract HybridBridge {
     // Events
@@ -40,7 +40,7 @@ contract HybridBridge {
         emit MessageSentToMove(msg.sender, messageId, data);
         
         // In production, this would trigger Movement's EVM-to-Move bridge
-        // For ParaForge testing, we simulate the cross-VM call
+        // For MoveForge testing, we simulate the cross-VM call
         
         return messageId;
     }

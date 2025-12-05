@@ -1,12 +1,12 @@
-import { ParaForgeClient } from './client';
+import { MoveForgeClient } from './client';
 import { Transaction, BatchSimulationResult } from './types';
 
 export class SimulationBuilder {
-  private client: ParaForgeClient;
+  private client: MoveForgeClient;
   private transactions: Transaction[] = [];
   private parallel: boolean = true;
 
-  constructor(client: ParaForgeClient) {
+  constructor(client: MoveForgeClient) {
     this.client = client;
   }
 

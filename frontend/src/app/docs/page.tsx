@@ -7,7 +7,7 @@ export default function Docs() {
     <div className="min-h-screen bg-slate-950">
       <header className="border-b border-slate-800 bg-slate-900/50 backdrop-blur-lg sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-white">⚡ ParaForge Documentation</h1>
+          <h1 className="text-2xl font-bold text-white">⚡ MoveForge Documentation</h1>
           <Link href="/">
             <Button variant="outline" size="sm">
               Back to Home
@@ -20,16 +20,16 @@ export default function Docs() {
         <Card className="mb-8 bg-slate-900 border-slate-800">
           <CardHeader>
             <CardTitle className="text-white">Installation</CardTitle>
-            <CardDescription>Get ParaForge installed and running</CardDescription>
+            <CardDescription>Get MoveForge installed and running</CardDescription>
           </CardHeader>
           <CardContent>
             <pre className="bg-slate-950 p-4 rounded-lg overflow-x-auto text-green-400 border border-slate-800">
-{`# Install ParaForge CLI
-cargo install paraforge
+{`# Install MoveForge CLI
+cargo install moveforge
 
 # Or build from source
-git clone https://github.com/paraforge/paraforge
-cd paraforge
+git clone https://github.com/moveforge/moveforge
+cd moveforge
 cargo build --release`}
             </pre>
           </CardContent>
@@ -38,34 +38,34 @@ cargo build --release`}
         <Card className="mb-8 bg-slate-900 border-slate-800">
           <CardHeader>
             <CardTitle className="text-white">Quick Start</CardTitle>
-            <CardDescription>Start using ParaForge in minutes</CardDescription>
+            <CardDescription>Start using MoveForge in minutes</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold mb-3 text-white">1. Start Local Node</h3>
               <pre className="bg-slate-950 p-4 rounded-lg text-green-400 border border-slate-800">
-{`paraforge node --fork testnet --port 8545`}
+{`moveforge node --fork testnet --port 8545`}
               </pre>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold mb-3 text-white">2. Run Simulations</h3>
               <pre className="bg-slate-950 p-4 rounded-lg text-green-400 border border-slate-800">
-{`paraforge sim --parallel --count 100 --web`}
+{`moveforge sim --parallel --count 100 --web`}
               </pre>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold mb-3 text-white">3. Test Contracts</h3>
               <pre className="bg-slate-950 p-4 rounded-lg text-green-400 border border-slate-800">
-{`paraforge test --fuzz --parallel`}
+{`moveforge test --fuzz --parallel`}
               </pre>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold mb-3 text-white">4. Deploy</h3>
               <pre className="bg-slate-950 p-4 rounded-lg text-green-400 border border-slate-800">
-{`paraforge deploy contracts/MyModule.move --network testnet`}
+{`moveforge deploy contracts/MyModule.move --network testnet`}
               </pre>
             </div>
           </CardContent>
@@ -74,13 +74,13 @@ cargo build --release`}
         <Card className="mb-8 bg-slate-900 border-slate-800">
           <CardHeader>
             <CardTitle className="text-white">SDK Usage</CardTitle>
-            <CardDescription>Integrate ParaForge into your application</CardDescription>
+            <CardDescription>Integrate MoveForge into your application</CardDescription>
           </CardHeader>
           <CardContent>
             <pre className="bg-slate-950 p-4 rounded-lg overflow-x-auto text-green-400 border border-slate-800">
-{`import { ParaForgeClient, TransactionBuilder, SimulationBuilder } from '@paraforge/sdk';
+{`import { MoveForgeClient, TransactionBuilder, SimulationBuilder } from '@moveforge/sdk';
 
-const client = new ParaForgeClient({
+const client = new MoveForgeClient({
   nodeUrl: 'http://localhost:8545',
   network: 'testnet',
 });
@@ -102,7 +102,7 @@ const results = await new SimulationBuilder(client)
         <Card className="mb-8 bg-slate-900 border-slate-800">
           <CardHeader>
             <CardTitle className="text-white">Features</CardTitle>
-            <CardDescription>What makes ParaForge powerful</CardDescription>
+            <CardDescription>What makes MoveForge powerful</CardDescription>
           </CardHeader>
           <CardContent>
             <ul className="space-y-3 text-gray-300">
@@ -145,13 +145,13 @@ const results = await new SimulationBuilder(client)
         <Card className="bg-slate-900 border-slate-800">
           <CardHeader>
             <CardTitle className="text-white">Resources</CardTitle>
-            <CardDescription>Learn more about ParaForge</CardDescription>
+            <CardDescription>Learn more about MoveForge</CardDescription>
           </CardHeader>
           <CardContent>
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="https://github.com/paraforge/paraforge" 
+                  href="https://github.com/moveforge/moveforge" 
                   className="text-purple-400 hover:text-purple-300 hover:underline flex items-center gap-2"
                   target="_blank"
                   rel="noopener noreferrer"

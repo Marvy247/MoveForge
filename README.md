@@ -1,4 +1,4 @@
-# ⚡ ParaForge
+# ⚡ MoveForge
 
 **The Ultimate Parallel Execution Testing Toolkit for Movement Blockchain**
 
@@ -6,7 +6,7 @@
 [![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=flat&logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-ParaForge is a Foundry/Anvil-inspired DevEx toolkit specifically built for Movement blockchain, enabling developers to simulate, test, and deploy with confidence through parallel execution testing, local node forking, and AI-powered analysis.
+MoveForge is a Foundry/Anvil-inspired DevEx toolkit specifically built for Movement blockchain, enabling developers to simulate, test, and deploy with confidence through parallel execution testing, local node forking, and AI-powered analysis.
 
 ## 🎯 Problem Solved
 
@@ -17,9 +17,9 @@ Movement's hybrid MoveVM + EVM architecture is powerful but lacks developer tool
 - **Limited hybrid debugging** - Hard to test Move ↔ EVM contract interactions
 - **Slow feedback loops** - Deploy-test-debug cycles are time-consuming
 
-## ✨ Solution: ParaForge
+## ✨ Solution: MoveForge
 
-ParaForge bridges the gap with:
+MoveForge bridges the gap with:
 
 🚀 **Parallel Execution Simulation** - Test hundreds of concurrent transactions with conflict detection  
 🔀 **Local Node Forking** - Fork Movement testnet/mainnet for instant local testing  
@@ -31,7 +31,7 @@ ParaForge bridges the gap with:
 ## 🏗️ Architecture
 
 ```
-ParaForge/
+MoveForge/
 ├── cli/              # Rust CLI tool (like Foundry/Forge)
 ├── core/             # Core blockchain simulation engine
 ├── simulator/        # Parallel transaction simulator with rayon
@@ -46,20 +46,20 @@ ParaForge/
 
 ```bash
 # Install from crates.io (when published)
-cargo install paraforge
+cargo install moveforge
 
 # Or build from source
-git clone https://github.com/paraforge/paraforge
-cd paraforge
+git clone https://github.com/moveforge/moveforge
+cd moveforge
 cargo build --release
 ```
 
 ### SDK Installation
 
 ```bash
-npm install @paraforge/sdk
+npm install @moveforge/sdk
 # or
-yarn add @paraforge/sdk
+yarn add @moveforge/sdk
 ```
 
 ## 🚀 Quick Start
@@ -68,47 +68,47 @@ yarn add @paraforge/sdk
 
 ```bash
 # Fork from Movement testnet
-paraforge node --fork testnet --port 8545
+moveforge node --fork testnet --port 8545
 
 # Or start fresh local node
-paraforge node --port 8545
+moveforge node --port 8545
 ```
 
 ### 2. Run Parallel Simulations
 
 ```bash
 # Simulate 100 transactions in parallel
-paraforge sim --parallel --count 100 --web
+moveforge sim --parallel --count 100 --web
 
 # With custom transaction file
-paraforge sim --file transactions.json --parallel --output json
+moveforge sim --file transactions.json --parallel --output json
 ```
 
 ### 3. Test Your Contracts
 
 ```bash
 # Run tests with parallel execution
-paraforge test --parallel
+moveforge test --parallel
 
 # With fuzzing
-paraforge test --fuzz --fuzz-runs 10000
+moveforge test --fuzz --fuzz-runs 10000
 ```
 
 ### 4. Deploy to Movement
 
 ```bash
 # Deploy Move module
-paraforge deploy contracts/MyModule.move --network testnet
+moveforge deploy contracts/MyModule.move --network testnet
 
 # Deploy Solidity contract
-paraforge deploy contracts/MyContract.sol --network testnet
+moveforge deploy contracts/MyContract.sol --network testnet
 ```
 
 ### 5. AI-Powered Analysis
 
 ```bash
 # Analyze transaction for vulnerabilities
-paraforge analyze 0xabc123... --vuln --optimize
+moveforge analyze 0xabc123... --vuln --optimize
 ```
 
 ## 💻 SDK Usage
@@ -116,9 +116,9 @@ paraforge analyze 0xabc123... --vuln --optimize
 ### Basic Setup
 
 ```typescript
-import { ParaForgeClient, TransactionBuilder, SimulationBuilder } from '@paraforge/sdk';
+import { MoveForgeClient, TransactionBuilder, SimulationBuilder } from '@moveforge/sdk';
 
-const client = new ParaForgeClient({
+const client = new MoveForgeClient({
   nodeUrl: 'http://localhost:8545',
   network: 'testnet',
   parallel: true,
@@ -157,7 +157,7 @@ console.log('Conflicts:', results.conflicts);
 ### Wallet Integration
 
 ```typescript
-import { WalletConnector } from '@paraforge/sdk';
+import { WalletConnector } from '@moveforge/sdk';
 
 const wallet = new WalletConnector();
 
@@ -191,7 +191,7 @@ Visit `http://localhost:3000` to access:
 ### Node Management
 
 ```bash
-paraforge node [OPTIONS]
+moveforge node [OPTIONS]
   --fork <NETWORK>    Fork from testnet/mainnet
   --port <PORT>       Port to run on (default: 8545)
   --parallel          Enable parallel execution
@@ -200,7 +200,7 @@ paraforge node [OPTIONS]
 ### Simulation
 
 ```bash
-paraforge sim [OPTIONS]
+moveforge sim [OPTIONS]
   --parallel          Run in parallel mode
   --file <FILE>       Transaction file (JSON)
   --count <N>         Number of transactions
@@ -211,7 +211,7 @@ paraforge sim [OPTIONS]
 ### Testing
 
 ```bash
-paraforge test [OPTIONS] [PATH]
+moveforge test [OPTIONS] [PATH]
   --fuzz             Enable fuzzing
   --fuzz-runs <N>    Number of fuzz iterations
   --parallel         Parallel test execution
@@ -220,7 +220,7 @@ paraforge test [OPTIONS] [PATH]
 ### Deployment
 
 ```bash
-paraforge deploy <CONTRACT> [OPTIONS]
+moveforge deploy <CONTRACT> [OPTIONS]
   --network <NET>    Network (testnet/mainnet/local)
   --key <KEY>        Private key or wallet path
 ```
@@ -228,7 +228,7 @@ paraforge deploy <CONTRACT> [OPTIONS]
 ### Analysis
 
 ```bash
-paraforge analyze <INPUT> [OPTIONS]
+moveforge analyze <INPUT> [OPTIONS]
   --vuln             Vulnerability detection
   --optimize         Gas optimization suggestions
 ```
@@ -236,7 +236,7 @@ paraforge analyze <INPUT> [OPTIONS]
 ### Project Initialization
 
 ```bash
-paraforge init <NAME> [OPTIONS]
+moveforge init <NAME> [OPTIONS]
   --template <TYPE>  Template (move/solidity/hybrid)
 ```
 
@@ -245,30 +245,30 @@ paraforge init <NAME> [OPTIONS]
 ### 1. DeFi Protocol Testing
 ```bash
 # Test flash loan exploit protection
-paraforge sim --file defi-attacks.json --parallel
+moveforge sim --file defi-attacks.json --parallel
 ```
 
 ### 2. NFT Concurrent Minting
 ```bash
 # Simulate 1000 users minting simultaneously
-paraforge test tests/concurrent-mint.rs --parallel
+moveforge test tests/concurrent-mint.rs --parallel
 ```
 
 ### 3. Hybrid Contract Debugging
 ```bash
 # Test Move module calling Solidity contract
-paraforge sim --file hybrid-bridge.json --web
+moveforge sim --file hybrid-bridge.json --web
 ```
 
 ### 4. Security Auditing
 ```bash
 # AI-powered vulnerability scan
-paraforge analyze 0xcontract --vuln
+moveforge analyze 0xcontract --vuln
 ```
 
 ## 🤖 AI Integration
 
-ParaForge integrates with [Ollama](https://ollama.ai/) for local AI-powered analysis:
+MoveForge integrates with [Ollama](https://ollama.ai/) for local AI-powered analysis:
 
 ```bash
 # Install Ollama
@@ -277,13 +277,13 @@ curl -fsSL https://ollama.ai/install.sh | sh
 # Pull a model
 ollama pull codellama
 
-# ParaForge will automatically use it for analysis
-paraforge analyze 0xabc... --vuln --optimize
+# MoveForge will automatically use it for analysis
+moveforge analyze 0xabc... --vuln --optimize
 ```
 
 ## 🔗 Movement Integration
 
-ParaForge connects to Movement networks:
+MoveForge connects to Movement networks:
 
 - **Testnet**: `https://aptos.testnet.porto.movementlabs.xyz/v1`
 - **Mainnet**: `https://mainnet.movementnetwork.xyz/v1`
@@ -314,8 +314,8 @@ Compatible with:
 
 ### Live Demo
 
-- **Dashboard**: https://paraforge-demo.vercel.app
-- **Documentation**: https://docs.paraforge.dev
+- **Dashboard**: https://moveforge-demo.vercel.app
+- **Documentation**: https://docs.moveforge.dev
 
 ## 📊 Benchmarks
 
@@ -367,8 +367,8 @@ Performance on M1 Mac:
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ```bash
-git clone https://github.com/paraforge/paraforge
-cd paraforge
+git clone https://github.com/moveforge/moveforge
+cd moveforge
 cargo test
 ```
 
@@ -385,10 +385,10 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## 📞 Contact
 
-- **GitHub**: [@paraforge](https://github.com/paraforge)
-- **Twitter**: [@paraforge_dev](https://twitter.com/paraforge_dev)
-- **Discord**: [Join Community](https://discord.gg/paraforge)
-- **Email**: hello@paraforge.dev
+- **GitHub**: [@moveforge](https://github.com/moveforge)
+- **Twitter**: [@moveforge_dev](https://twitter.com/moveforge_dev)
+- **Discord**: [Join Community](https://discord.gg/moveforge)
+- **Email**: hello@moveforge.dev
 
 ---
 

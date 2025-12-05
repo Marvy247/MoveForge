@@ -4,7 +4,7 @@ use std::fs;
 use std::path::Path;
 
 pub async fn run(name: String, template: String) -> Result<()> {
-    println!("{}", "Initializing new ParaForge project...".green());
+    println!("{}", "Initializing new MoveForge project...".green());
     println!();
 
     let project_path = Path::new(&name);
@@ -28,7 +28,7 @@ pub async fn run(name: String, template: String) -> Result<()> {
         _ => anyhow::bail!("Unknown template: {}", template),
     };
 
-    fs::write(project_path.join("paraforge.toml"), config)?;
+    fs::write(project_path.join("moveforge.toml"), config)?;
 
     let test_content = r#"// Sample test file
 // Run with: paraforge test
@@ -42,31 +42,31 @@ async fn test_transfer() {
 
     let readme = format!(r#"# {}
 
-A ParaForge project for Movement blockchain.
+A MoveForge project for Movement blockchain.
 
 ## Setup
 
 ```bash
 cd {}
-paraforge node --fork testnet
+moveforge node --fork testnet
 ```
 
 ## Test
 
 ```bash
-paraforge test
+moveforge test
 ```
 
 ## Deploy
 
 ```bash
-paraforge deploy contracts/YourContract.move --network testnet
+moveforge deploy contracts/YourContract.move --network testnet
 ```
 
 ## Simulate
 
 ```bash
-paraforge sim --parallel --count 100 --web
+moveforge sim --parallel --count 100 --web
 ```
 "#, name, name);
 

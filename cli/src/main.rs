@@ -6,8 +6,8 @@ use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 mod commands;
 
 #[derive(Parser)]
-#[command(name = "paraforge")]
-#[command(about = "ParaForge - Parallel execution testing toolkit for Movement blockchain", long_about = None)]
+#[command(name = "moveforge")]
+#[command(about = "MoveForge - Foundry-grade testing toolkit for Movement blockchain", long_about = None)]
 #[command(version)]
 struct Cli {
     #[command(subcommand)]
@@ -115,14 +115,14 @@ enum Commands {
 async fn main() -> Result<()> {
     tracing_subscriber::registry()
         .with(tracing_subscriber::EnvFilter::new(
-            std::env::var("RUST_LOG").unwrap_or_else(|_| "paraforge=info".into()),
+            std::env::var("RUST_LOG").unwrap_or_else(|_| "moveforge=info".into()),
         ))
         .with(tracing_subscriber::fmt::layer())
         .init();
 
     let cli = Cli::parse();
 
-    println!("{}", "⚡ ParaForge - Movement DevEx Toolkit".bright_cyan().bold());
+    println!("{}", "⚡ MoveForge - Movement DevEx Toolkit".bright_cyan().bold());
     println!();
 
     match cli.command {

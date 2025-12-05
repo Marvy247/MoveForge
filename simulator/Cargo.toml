@@ -1,5 +1,5 @@
 [package]
-name = "paraforge-simulator"
+name = "moveforge-simulator"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
@@ -11,5 +11,5 @@ serde.workspace = true
 serde_json.workspace = true
 anyhow.workspace = true
 tracing.workspace = true
-paraforge-core = { path = "../core" }
+moveforge-core = { path = "../core" }
 rayon = "1.8"

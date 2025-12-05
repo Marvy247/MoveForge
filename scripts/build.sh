@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "⚡ Building ParaForge"
+echo "⚡ Building MoveForge"
 echo "===================="
 echo ""
 
@@ -32,6 +32,6 @@ echo ""
 echo "✅ All components built successfully!"
 echo ""
 echo "Artifacts:"
-echo "  - CLI binary: target/release/paraforge"
+echo "  - CLI binary: target/release/moveforge"
 echo "  - SDK package: sdk/dist/"
 echo "  - Frontend: frontend/.next/"

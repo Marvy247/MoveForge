@@ -8,13 +8,13 @@ export default function Home() {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16 space-y-4">
           <h1 className="text-6xl font-bold text-white mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-            ⚡ ParaForge
+            ⚡ MoveForge
           </h1>
           <p className="text-2xl text-purple-300 mb-4">
-            Parallel Execution Testing Toolkit for Movement
+            Foundry-Grade Testing for Movement
           </p>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Foundry-inspired DevEx tool for Movement blockchain. Simulate, test, and deploy with confidence.
+            The Foundry for Movement blockchain. Simulate, test, and deploy with confidence.
           </p>
         </div>
 
@@ -52,21 +52,21 @@ export default function Home() {
         <Card className="max-w-4xl mx-auto bg-slate-900/50 border-slate-800">
           <CardHeader>
             <CardTitle className="text-2xl text-white">Quick Start</CardTitle>
-            <CardDescription>Get started with ParaForge in minutes</CardDescription>
+            <CardDescription>Get started with MoveForge in minutes</CardDescription>
           </CardHeader>
           <CardContent>
             <pre className="bg-slate-950 p-4 rounded-lg text-green-400 overflow-x-auto border border-slate-800">
-{`# Install ParaForge CLI
-cargo install paraforge
+{`# Install MoveForge CLI
+cargo install moveforge
 
 # Start local node with testnet fork
-paraforge node --fork testnet
+moveforge node --fork testnet
 
 # Run parallel simulation
-paraforge sim --parallel --count 100 --web
+moveforge sim --parallel --count 100 --web
 
 # Deploy contract
-paraforge deploy contracts/MyModule.move --network testnet`}
+moveforge deploy contracts/MyModule.move --network testnet`}
             </pre>
           </CardContent>
         </Card>

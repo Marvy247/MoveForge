@@ -1,4 +1,4 @@
-# Multi-stage build for ParaForge
+# Multi-stage build for MoveForge
 
 # Stage 1: Build Rust CLI
 FROM rust:1.75 as rust-builder
@@ -12,7 +12,7 @@ COPY core ./core
 COPY simulator ./simulator
 
 # Build release binary
-RUN cargo build --release --bin paraforge
+RUN cargo build --release --bin moveforge
 
 # Stage 2: Build Node.js SDK and Frontend
 FROM node:20-alpine as node-builder
@@ -44,15 +44,15 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy Rust binary
-COPY --from=rust-builder /build/target/release/paraforge /usr/local/bin/paraforge
+COPY --from=rust-builder /build/target/release/moveforge /usr/local/bin/moveforge
 
 # Copy SDK build
-COPY --from=node-builder /build/sdk/dist /opt/paraforge/sdk
+COPY --from=node-builder /build/sdk/dist /opt/moveforge/sdk
 
 # Copy Frontend build
-COPY --from=node-builder /build/frontend/.next /opt/paraforge/frontend/.next
-COPY --from=node-builder /build/frontend/public /opt/paraforge/frontend/public
-COPY --from=node-builder /build/frontend/package.json /opt/paraforge/frontend/
+COPY --from=node-builder /build/frontend/.next /opt/moveforge/frontend/.next
+COPY --from=node-builder /build/frontend/public /opt/moveforge/frontend/public
+COPY --from=node-builder /build/frontend/package.json /opt/moveforge/frontend/
 
 # Install Node.js for frontend
 COPY --from=node:20-alpine /usr/local/bin/node /usr/local/bin/
@@ -70,4 +70,4 @@ HEALTHCHECK --interval=30s --timeout=3s \
   CMD curl -f http://localhost:8545/ || exit 1
 
 # Default command
-CMD ["paraforge", "node", "--port", "8545"]
+CMD ["moveforge", "node", "--port", "8545"]

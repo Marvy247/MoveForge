@@ -32,7 +32,7 @@ export default function Dashboard() {
       }
     } catch (error) {
       // Node not running - dashboard works in demo mode
-      console.log('ParaForge node not running - using demo mode');
+      console.log('MoveForge node not running - using demo mode');
       setIsConnected(false);
     }
   };
@@ -49,19 +49,12 @@ export default function Dashboard() {
       <header className="border-b border-slate-800 bg-slate-900/50 backdrop-blur-lg sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-4">
-            <h1 className="text-2xl font-bold text-white">⚡ ParaForge Dashboard</h1>
+            <h1 className="text-2xl font-bold text-white">⚡ MoveForge Dashboard</h1>
             <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-800 rounded-full">
               <div className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-500 animate-pulse' : 'bg-yellow-500'}`} />
-              <span className="text-sm text-gray-300">
-                {isConnected ? 'Node Connected' : 'Demo Mode'}
-              </span>
             </div>
           </div>
-          <div className="flex gap-2">
-            <Button variant="outline" size="sm" onClick={connectToNode}>
-              {isConnected ? 'Reconnect' : 'Connect'}
-            </Button>
-          </div>
+
         </div>
       </header>
 

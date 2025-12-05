@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 import {
-  ParaForgeConfig,
+  MoveForgeConfig,
   Transaction,
   SimulationResult,
   BatchSimulationResult,
@@ -8,11 +8,11 @@ import {
   AnalysisResult,
 } from './types';
 
-export class ParaForgeClient {
+export class MoveForgeClient {
   private api: AxiosInstance;
-  private config: ParaForgeConfig;
+  private config: MoveForgeConfig;
 
-  constructor(config: ParaForgeConfig) {
+  constructor(config: MoveForgeConfig) {
     this.config = config;
     this.api = axios.create({
       baseURL: config.nodeUrl,

@@ -1,15 +1,15 @@
-# ParaForge - Movement M1 Hackathon Submission
+# MoveForge - Movement M1 Hackathon Submission
 
 ## Project Information
 
-- **Project Name**: ParaForge
+- **Project Name**: MoveForge
 - **Category**: Best New Devex Tool on Movement
-- **Team**: ParaForge Contributors
+- **Team**: MoveForge Contributors
 - **Submission Date**: December 2024
 
 ## Overview
 
-ParaForge is a Foundry/Anvil-inspired DevEx toolkit specifically built for Movement blockchain, enabling developers to simulate, test, and deploy with confidence through parallel execution testing, local node forking, and AI-powered analysis.
+MoveForge is a Foundry/Anvil-inspired DevEx toolkit specifically built for Movement blockchain, enabling developers to simulate, test, and deploy with confidence through parallel execution testing, local node forking, and AI-powered analysis.
 
 ## Problem Statement
 
@@ -22,7 +22,7 @@ Movement's hybrid MoveVM + EVM architecture is powerful but lacks developer tool
 
 ## Solution
 
-ParaForge provides:
+MoveForge provides:
 
 1. **Parallel Execution Simulation** - Test hundreds of concurrent transactions with conflict detection
 2. **Local Node Forking** - Fork Movement testnet/mainnet for instant local testing
@@ -36,7 +36,7 @@ ParaForge provides:
 ### Architecture
 
 ```
-ParaForge/
+MoveForge/
 ├── cli/          - Rust CLI (Clap, Tokio, Rayon)
 ├── core/         - Blockchain simulation engine
 ├── simulator/    - Parallel transaction simulator
@@ -55,15 +55,15 @@ ParaForge/
 ### Features Delivered
 
 ✅ **CLI Commands**:
-- `paraforge node` - Local node with forking
-- `paraforge sim` - Parallel transaction simulation
-- `paraforge test` - Testing with fuzzing
-- `paraforge deploy` - Contract deployment
-- `paraforge analyze` - AI-powered analysis
-- `paraforge init` - Project scaffolding
+- `moveforge node` - Local node with forking
+- `moveforge sim` - Parallel transaction simulation
+- `moveforge test` - Testing with fuzzing
+- `moveforge deploy` - Contract deployment
+- `moveforge analyze` - AI-powered analysis
+- `moveforge init` - Project scaffolding
 
 ✅ **SDK Features**:
-- ParaForgeClient for node interaction
+- MoveForgeClient for node interaction
 - TransactionBuilder for easy tx creation
 - SimulationBuilder for batch simulations
 - WalletConnector for Petra/Martian/MetaMask
@@ -108,14 +108,14 @@ ParaForge/
 [YouTube Demo Video](https://youtube.com/placeholder)
 
 ### Live Demo
-- Dashboard: https://paraforge-demo.vercel.app (or localhost:3000)
+- Dashboard: https://moveforge-demo.vercel.app (or localhost:3000)
 - Documentation: See README.md
 
 ### Execution on Movement Testnet
 
 Example transaction executed during development:
 ```bash
-$ paraforge deploy examples/contracts/defi_swap.move --network testnet
+$ moveforge deploy examples/contracts/defi_swap.move --network testnet
 
 ✅ Deployment successful!
 Contract address: 0x[address]
@@ -190,7 +190,7 @@ Transaction hash: 0x[hash]
 
 ## Repository
 
-- **GitHub**: https://github.com/paraforge/paraforge
+- **GitHub**: https://github.com/moveforge/moveforge
 - **License**: MIT
 - **Documentation**: Comprehensive README, API docs, examples
 - **Examples**: DEX swap, NFT minting, hybrid bridge contracts
@@ -203,7 +203,7 @@ Built by experienced blockchain developers with expertise in:
 - Move language and Aptos ecosystem
 - DevEx and developer tooling
 
-## Why ParaForge Deserves to Win
+## Why MoveForge Deserves to Win
 
 1. **Solves Real Problem**: Addresses critical gap in Movement tooling
 2. **Production Quality**: Not just a prototype - ready to use today
@@ -215,14 +215,14 @@ Built by experienced blockchain developers with expertise in:
 
 ## Conclusion
 
-ParaForge brings Foundry-grade developer experience to Movement, enabling developers to ship faster, test smarter, and build better. It's the DevEx tool Movement developers need and deserve.
+MoveForge brings Foundry-grade developer experience to Movement, enabling developers to ship faster, test smarter, and build better. It's the DevEx tool Movement developers need and deserve.
 
 ## Contact
 
-- GitHub: [@paraforge](https://github.com/paraforge)
-- Twitter: [@paraforge_dev](https://twitter.com/paraforge_dev)
+- GitHub: [@moveforge](https://github.com/moveforge)
+- Twitter: [@moveforge_dev](https://twitter.com/moveforge_dev)
 - Discord: [Community Link]
-- Email: hello@paraforge.dev
+- Email: hello@moveforge.dev
 
 ---
 

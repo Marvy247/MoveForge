@@ -1,6 +1,6 @@
 use anyhow::{Result, Context};
 use colored::Colorize;
-use paraforge_simulator::Simulator;
+use moveforge_simulator::Simulator;
 use serde_json::json;
 use std::time::Instant;
 

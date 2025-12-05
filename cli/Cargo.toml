@@ -1,5 +1,5 @@
 [package]
-name = "paraforge"
+name = "moveforge"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
@@ -13,8 +13,8 @@ anyhow.workspace = true
 clap.workspace = true
 tracing.workspace = true
 tracing-subscriber.workspace = true
-paraforge-core = { path = "../core" }
-paraforge-simulator = { path = "../simulator" }
+moveforge-core = { path = "../core" }
+moveforge-simulator = { path = "../simulator" }
 reqwest = { version = "0.11", features = ["json"] }
 colored = "2.1"
 indicatif = "0.17"

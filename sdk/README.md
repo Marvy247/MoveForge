@@ -1,22 +1,22 @@
-# @paraforge/sdk
+# @moveforge/sdk
 
-TypeScript SDK for ParaForge - The Movement DevEx Toolkit
+TypeScript SDK for MoveForge - Foundry-grade testing for Movement
 
 ## Installation
 
 ```bash
-npm install @paraforge/sdk
+npm install @moveforge/sdk
 # or
-yarn add @paraforge/sdk
+yarn add @moveforge/sdk
 ```
 
 ## Quick Start
 
 ```typescript
-import { ParaForgeClient, SimulationBuilder, TransactionBuilder } from '@paraforge/sdk';
+import { MoveForgeClient, SimulationBuilder, TransactionBuilder } from '@moveforge/sdk';
 
 // Initialize client
-const client = new ParaForgeClient({
+const client = new MoveForgeClient({
   nodeUrl: 'http://localhost:8545',
   network: 'testnet',
   parallel: true,
@@ -74,9 +74,9 @@ const signedTx = await wallet.signTransaction(tx);
 
 ## API Reference
 
-### ParaForgeClient
+### MoveForgeClient
 
-Main client for interacting with ParaForge node.
+Main client for interacting with MoveForge node.
 
 #### Methods
 

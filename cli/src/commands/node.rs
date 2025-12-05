@@ -1,10 +1,10 @@
 use anyhow::Result;
 use colored::Colorize;
-use paraforge_core::node::LocalNode;
+use moveforge_core::node::LocalNode;
 use tracing::info;
 
 pub async fn run(fork: Option<String>, port: u16, parallel: bool) -> Result<()> {
-    println!("{}", "Starting ParaForge local node...".green());
+    println!("{}", "Starting MoveForge local node...".green());
     
     let fork_url = if let Some(network) = fork {
         let url = match network.as_str() {
