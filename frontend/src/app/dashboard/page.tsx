@@ -27,15 +27,21 @@ export default function Dashboard() {
       
       if (response.ok) {
         setIsConnected(true);
+      } else {
+        setIsConnected(false);
       }
     } catch (error) {
-      console.error('Connection failed:', error);
+      // Node not running - dashboard works in demo mode
+      console.log('ParaForge node not running - using demo mode');
       setIsConnected(false);
     }
   };
 
   useEffect(() => {
-    connectToNode();
+    // Try to connect, but don't block if node isn't running
+    connectToNode().catch(() => {
+      // Silently fail - dashboard works without node
+    });
   }, []);
 
   return (
@@ -45,9 +51,9 @@ export default function Dashboard() {
           <div className="flex items-center gap-4">
             <h1 className="text-2xl font-bold text-white">⚡ ParaForge Dashboard</h1>
             <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-800 rounded-full">
-              <div className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`} />
+              <div className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-500 animate-pulse' : 'bg-yellow-500'}`} />
               <span className="text-sm text-gray-300">
-                {isConnected ? 'Connected' : 'Disconnected'}
+                {isConnected ? 'Node Connected' : 'Demo Mode'}
               </span>
             </div>
           </div>

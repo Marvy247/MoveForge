@@ -80,7 +80,7 @@ impl RpcServer {
         Ok(json!("0x5208"))
     }
 
-    async fn execute_move_transaction(&self, params: Value) -> Result<Value> {
+    async fn execute_move_transaction(&self, _params: Value) -> Result<Value> {
         let tx_hash = format!("0x{:064x}", rand::random::<u64>());
         Ok(json!({
             "hash": tx_hash,
@@ -89,7 +89,8 @@ impl RpcServer {
     }
 
     async fn simulate_batch(&self, params: Value) -> Result<Value> {
-        let transactions = params.as_array().unwrap_or(&vec![]);
+        let empty_vec = vec![];
+        let transactions = params.as_array().unwrap_or(&empty_vec);
         
         let mut results = Vec::new();
         for (i, _tx) in transactions.iter().enumerate() {
