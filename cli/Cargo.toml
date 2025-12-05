@@ -1,0 +1,20 @@
+[package]
+name = "paraforge"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+clap.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+paraforge-core = { path = "../core" }
+paraforge-simulator = { path = "../simulator" }
+reqwest = { version = "0.11", features = ["json"] }
+colored = "2.1"
+indicatif = "0.17"
