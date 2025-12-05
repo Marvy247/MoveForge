@@ -8,7 +8,7 @@
 
 MoveForge is a Foundry/Anvil-inspired DevEx toolkit specifically built for Movement blockchain, enabling developers to simulate, test, and deploy with confidence through parallel execution testing, local node forking, and AI-powered analysis.
 
-## 🎯 Problem Solved
+##  Problem Solved
 
 Movement's hybrid MoveVM + EVM architecture is powerful but lacks developer tooling compared to mature EVM ecosystems. Developers face:
 
@@ -17,7 +17,7 @@ Movement's hybrid MoveVM + EVM architecture is powerful but lacks developer tool
 - **Limited hybrid debugging** - Hard to test Move ↔ EVM contract interactions
 - **Slow feedback loops** - Deploy-test-debug cycles are time-consuming
 
-## ✨ Solution: MoveForge
+##  Solution: MoveForge
 
 MoveForge bridges the gap with:
 
@@ -28,7 +28,7 @@ MoveForge bridges the gap with:
 ⚡ **Real-time Dashboard** - Visual transaction timeline with resource diff tracking  
 🧪 **Advanced Testing Suite** - Fuzzing, invariants, and cheatcodes for comprehensive testing
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 MoveForge/
@@ -40,7 +40,7 @@ MoveForge/
 └── examples/         # Sample contracts and scripts
 ```
 
-## 📦 Installation
+##  Installation
 
 ### CLI Installation
 
@@ -62,7 +62,7 @@ npm install @moveforge/sdk
 yarn add @moveforge/sdk
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Start Local Node
 
@@ -169,7 +169,7 @@ const signedTx = await wallet.signTransaction(tx);
 await client.sendTransaction(signedTx);
 ```
 
-## 🎨 Dashboard
+##  Dashboard
 
 Launch the interactive dashboard:
 
@@ -240,7 +240,7 @@ moveforge init <NAME> [OPTIONS]
   --template <TYPE>  Template (move/solidity/hybrid)
 ```
 
-## 🎯 Use Cases
+##  Use Cases
 
 ### 1. DeFi Protocol Testing
 ```bash
@@ -295,7 +295,7 @@ Compatible with:
 - Movement Explorer
 - Petra & Martian wallets
 
-## 🏆 Hackathon Submission
+##  Hackathon Submission
 
 **Category**: Best New Devex Tool on Movement  
 **Prize**: $5,000
@@ -308,14 +308,6 @@ Compatible with:
 4. **Foundry-like UX** familiar to EVM developers
 5. **Production-ready MVP** with full documentation
 
-### Demo Video
-
-[Watch Demo on YouTube](https://youtube.com/placeholder)
-
-### Live Demo
-
-- **Dashboard**: https://moveforge-demo.vercel.app
-- **Documentation**: https://docs.moveforge.dev
 
 ## 📊 Benchmarks
 
@@ -383,13 +375,5 @@ MIT License - see [LICENSE](LICENSE) for details.
 - Foundry team for UX inspiration
 - Aptos for Move language tooling
 
-## 📞 Contact
 
-- **GitHub**: [@moveforge](https://github.com/moveforge)
-- **Twitter**: [@moveforge_dev](https://twitter.com/moveforge_dev)
-- **Discord**: [Join Community](https://discord.gg/moveforge)
-- **Email**: hello@moveforge.dev
-
----
-
-Built with ⚡ for the Movement M1 Hackathon 2024
+Built for the Movement M1 Hackathon 2024
