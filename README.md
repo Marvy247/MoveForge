@@ -1,4 +1,4 @@
-# ⚡ MoveForge
+#  MoveForge
 
 **The Ultimate Parallel Execution Testing Toolkit for Movement Blockchain**
 
@@ -21,12 +21,12 @@ Movement's hybrid MoveVM + EVM architecture is powerful but lacks developer tool
 
 MoveForge bridges the gap with:
 
-🚀 **Parallel Execution Simulation** - Test hundreds of concurrent transactions with conflict detection  
-🔀 **Local Node Forking** - Fork Movement testnet/mainnet for instant local testing  
-🔗 **Hybrid Move-EVM Testing** - Seamlessly test interactions between Move modules and Solidity contracts  
-🤖 **AI-Powered Analysis** - Vulnerability detection and gas optimization via local LLM integration  
-⚡ **Real-time Dashboard** - Visual transaction timeline with resource diff tracking  
-🧪 **Advanced Testing Suite** - Fuzzing, invariants, and cheatcodes for comprehensive testing
+ **Parallel Execution Simulation** - Test hundreds of concurrent transactions with conflict detection  
+ **Local Node Forking** - Fork Movement testnet/mainnet for instant local testing  
+ **Hybrid Move-EVM Testing** - Seamlessly test interactions between Move modules and Solidity contracts  
+ **AI-Powered Analysis** - Vulnerability detection and gas optimization via local LLM integration  
+ **Real-time Dashboard** - Visual transaction timeline with resource diff tracking  
+ **Advanced Testing Suite** - Fuzzing, invariants, and cheatcodes for comprehensive testing
 
 ##  Architecture
 
@@ -266,7 +266,7 @@ moveforge sim --file hybrid-bridge.json --web
 moveforge analyze 0xcontract --vuln
 ```
 
-## 🤖 AI Integration
+##  AI Integration
 
 MoveForge integrates with [Ollama](https://ollama.ai/) for local AI-powered analysis:
 
@@ -281,7 +281,7 @@ ollama pull codellama
 moveforge analyze 0xabc... --vuln --optimize
 ```
 
-## 🔗 Movement Integration
+##  Movement Integration
 
 MoveForge connects to Movement networks:
 
@@ -319,7 +319,7 @@ Performance on M1 Mac:
 | 100         | 1.2s      | 180ms    | 6.7x    |
 | 1000        | 12.5s     | 1.4s     | 8.9x    |
 
-## 💰 Monetization Strategy
+##  Monetization Strategy
 
 ### Open-Core Model
 - **CLI**: Free and open-source (MIT license)
@@ -331,7 +331,7 @@ Performance on M1 Mac:
 - Integration partnerships
 - Professional services (auditing)
 
-## 🛣️ Roadmap
+##  Roadmap
 
 ### Phase 1 (Hackathon MVP) ✅
 - [x] Parallel simulation engine
@@ -354,7 +354,7 @@ Performance on M1 Mac:
 - [ ] Team collaboration features
 - [ ] CI/CD integrations
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
@@ -364,7 +364,7 @@ cd moveforge
 cargo test
 ```
 
-## 📄 License
+##  License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
@@ -376,4 +376,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 - Aptos for Move language tooling
 
 
-Built for the Movement M1 Hackathon 2024
+Built for the Movement M1 Hackathon 2025
