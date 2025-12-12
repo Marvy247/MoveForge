@@ -23,6 +23,27 @@ export default function Home() {
             and AI-powered contract analysis on Movement.
           </p>
         </div>
+        {/* CTA Buttons */}
+        <div className="flex justify-center gap-4 mb-20">
+          <Link href="/dashboard">
+            <Button 
+              size="lg" 
+              className="bg-white text-black hover:bg-gray-200 font-medium transition-all h-12 px-8"
+            >
+              Launch Dashboard
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+          </Link>
+          <Link href="/docs">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-gray-700 text-white hover:bg-gray-900 h-12 px-8"
+            >
+              Documentation
+            </Button>
+          </Link>
+        </div>
 
         {/* Feature Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-20 max-w-6xl mx-auto">
@@ -58,27 +79,6 @@ export default function Home() {
           />
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex justify-center gap-4 mb-20">
-          <Link href="/dashboard">
-            <Button 
-              size="lg" 
-              className="bg-white text-black hover:bg-gray-200 font-medium transition-all h-12 px-8"
-            >
-              Launch Dashboard
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-          </Link>
-          <Link href="/docs">
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-gray-700 text-white hover:bg-gray-900 h-12 px-8"
-            >
-              Documentation
-            </Button>
-          </Link>
-        </div>
 
         {/* Quick Start Card */}
         <Card className="max-w-4xl mx-auto bg-zinc-950 border-gray-800">
