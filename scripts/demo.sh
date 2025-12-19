@@ -21,28 +21,28 @@ clear
 echo ""
 echo -e "${GREEN}⚡ MoveForge Demo - Movement M1 Hackathon${NC}"
 echo ""
-read -p "[STEP 1] Press Enter to show CLI commands..."
+read -p ""
 clear
 echo ""
 
 # Step 1: CLI Overview
 "$MOVEFORGE" --help
 echo ""
-read -p "[STEP 2] Press Enter for parallel simulation..."
+read -p ""
 clear
 echo ""
 
 # Step 2: Parallel Simulation (10 transactions)
 "$MOVEFORGE" sim --parallel --count 10 --output table
 echo ""
-read -p "[STEP 3] Press Enter to scale up (100 txs)..."
+read -p ""
 clear
 echo ""
 
 # Step 3: Large Scale Simulation (100 transactions)
 "$MOVEFORGE" sim --parallel --count 100 --output table
 echo ""
-read -p "[STEP 4] Press Enter for testing suite..."
+read -p ""
 clear
 echo ""
 
@@ -51,26 +51,26 @@ echo ""
 echo ""
 "$MOVEFORGE" test --fuzz --fuzz-runs 100
 echo ""
-read -p "[STEP 5] Press Enter for AI analysis..."
+read -p ""
 clear
 echo ""
 
 # Step 5: AI Analysis
 "$MOVEFORGE" analyze "$PROJECT_ROOT/examples/contracts/defi_swap.move" --vuln --optimize
 echo ""
-read -p "[STEP 6] Press Enter to deploy contract..."
+read -p ""
 clear
 echo ""
 
 # Step 6: Deployment
 "$MOVEFORGE" deploy "$PROJECT_ROOT/examples/contracts/defi_swap.move" --network testnet
 echo ""
-read -p "[STEP 7] Press Enter to show dashboard..."
+read -p ""
 echo ""
 echo -e "${CYAN}→ Open browser to: http://localhost:3000${NC}"
 echo -e "${CYAN}→ Dashboard should be running (if not, open new terminal: cd frontend && npm run dev)${NC}"
 echo ""
-read -p "[STEP 8] Press Enter when done with dashboard demo..."
+read -p ""
 clear
 echo ""
 
@@ -79,7 +79,7 @@ cd /tmp
 "$MOVEFORGE" init movement-defi --template hybrid
 cd - > /dev/null
 echo ""
-read -p "[FINAL] Press Enter for summary..."
+read -p ""
 clear
 echo ""
 
